@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 21:40:56 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/11 14:18:44 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/14 21:05:51 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 	{
 		return (NULL);
 	}
-	while (count > x)
-	{
-		re[x] = 0;
-		x++;
-	}
+	ft_bzero(re, size * count);
 	return (re);
 }
 /*
