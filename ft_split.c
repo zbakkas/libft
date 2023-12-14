@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 14:41:21 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/14 19:09:43 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ char	**ft_split(char const *s, char c)
 	x = 0;
 	j = 0;
 	re = (char **)ft_calloc(1 + c_word(s, c), sizeof(char *));
+	if (!re)
+		return (NULL);
 	if ((c_word(s, c) == 1 && !l_word(s, c, x)[1]) || (!s || c == '\0'))
 	{
 		re[0] = NULL;
