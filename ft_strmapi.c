@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:11:52 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/11 15:23:23 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/14 20:50:03 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	x = 0;
 	re = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!re)
+		return (NULL);
 	while (s[x])
 	{
 		re[x] = f(x, s[x]);
