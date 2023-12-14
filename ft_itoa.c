@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:27:33 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 15:49:24 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/14 19:05:16 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	chick_l(int n)
 	int	x;
 
 	x = 0;
-	if (n <=9 && n >= 0)
+	if (n <= 9 && n >= 0)
 		return (1);
 	if (n < 0)
 	{
@@ -40,7 +40,13 @@ char	*ft_itoa(int n)
 
 	j = n;
 	x = chick_l(n) -1;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	re = ft_calloc(chick_l(n) + 1, sizeof(char));
+	if (!re)
+		return (NULL);
 	if (n < 0)
 		j *= -1;
 	while (j != 0)
@@ -55,5 +61,5 @@ char	*ft_itoa(int n)
 /*
 int main()
 {
-	printf("%s",ft_itoa(NULL));
+	printf("%s",ft_itoa(-623));
 }*/
