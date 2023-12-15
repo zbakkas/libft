@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:29:49 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 19:00:13 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/15 23:41:02 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
+/*
 int main()
 {
 	t_list *t;
@@ -41,4 +41,4 @@ int main()
 		t = t->next;
 	}
 	
-}
+}*/

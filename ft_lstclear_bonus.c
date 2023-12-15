@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:05:57 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 21:53:15 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/15 23:41:26 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-
+/*
 void free_int(void *data)
 {
     free(data);
@@ -46,4 +46,4 @@ int main()
 	ft_lstclear(&t,free_int);
 	printf("%p",(void*)t);
 
-}
+}*/
