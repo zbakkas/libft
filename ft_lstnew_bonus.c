@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 18:38:54 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 14:21:51 by zbakkas          ###   ########.fr       */
+/*   Created: 2023/12/15 14:46:39 by zbakkas           #+#    #+#             */
+/*   Updated: 2023/12/15 17:48:33 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-char	*ft_strchr(const char *str, int c)
-{
-	int	x;
 
-	x = 0;
-	while (str[x])
-	{
-		if (str[x] == (unsigned char)c)
-		{
-			return ((char *)(str + x));
-		}
-		x++;
-	}
-	if (str[x] == c)
-	{
-		return ((char *)(str + x));
-	}
-	return (NULL);
-}
-/*
-int main ()
+t_list	*ft_lstnew(void *content)
 {
-	printf("%s\n",ft_strchr("",'h'));
-	printf("%s",strchr("",'h'));
-}*/
+	t_list	*new_node;
+
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+	{
+		return (NULL);
+	}
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}

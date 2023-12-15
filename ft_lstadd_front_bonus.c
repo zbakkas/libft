@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 18:38:54 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 14:21:51 by zbakkas          ###   ########.fr       */
+/*   Created: 2023/12/15 16:29:49 by zbakkas           #+#    #+#             */
+/*   Updated: 2023/12/15 19:00:13 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-char	*ft_strchr(const char *str, int c)
-{
-	int	x;
 
-	x = 0;
-	while (str[x])
-	{
-		if (str[x] == (unsigned char)c)
-		{
-			return ((char *)(str + x));
-		}
-		x++;
-	}
-	if (str[x] == c)
-	{
-		return ((char *)(str + x));
-	}
-	return (NULL);
-}
-/*
-int main ()
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	printf("%s\n",ft_strchr("",'h'));
-	printf("%s",strchr("",'h'));
-}*/
+	if (!*lst)
+	{
+		*lst = new;
+	}
+	else
+	{
+		new->next = *lst;
+		*lst = new;
+	}
+}
+
+int main()
+{
+	t_list *t;
+	t =malloc(sizeof(t_list));
+	t->content ="1node";
+	t->next =malloc(sizeof(t_list));
+	t->next->content = "2node";
+	t->next->next = NULL;
+
+	ft_lstadd_front(&t,ft_lstnew("abc"));
+	while (t)
+	{
+		printf("%s\n",t->content);
+		t = t->next;
+	}
+	
+}

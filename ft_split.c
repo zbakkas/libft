@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 19:09:43 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/15 15:03:45 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,13 @@ int	c_word(char const *s, char c)
 
 int	*l_word(char const *s, char c, int x)
 {
-	int	re[2];
+	int	*re;
 	int	j;
 	int	xx;
 
 	j = 0;
 	xx = x;
+	re = malloc(sizeof(int) * 3);
 	while (s[xx] != c)
 	{
 		xx++;
@@ -55,6 +56,7 @@ int	*l_word(char const *s, char c, int x)
 		xx++;
 	}
 	re[1] = j;
+	re[2] = 0;
 	return (re);
 }
 

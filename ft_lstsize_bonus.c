@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 18:38:54 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 14:21:51 by zbakkas          ###   ########.fr       */
+/*   Created: 2023/12/15 17:21:50 by zbakkas           #+#    #+#             */
+/*   Updated: 2023/12/15 18:09:38 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-char	*ft_strchr(const char *str, int c)
-{
-	int	x;
 
-	x = 0;
-	while (str[x])
+int	ft_lstsize(t_list *lst)
+{
+	int	re;
+
+	re = 0;
+	while (lst)
 	{
-		if (str[x] == (unsigned char)c)
-		{
-			return ((char *)(str + x));
-		}
-		x++;
+		re++;
+		lst = lst->next;
 	}
-	if (str[x] == c)
-	{
-		return ((char *)(str + x));
-	}
-	return (NULL);
+	return (re);
 }
 /*
-int main ()
+int main()
 {
-	printf("%s\n",ft_strchr("",'h'));
-	printf("%s",strchr("",'h'));
+	t_list *t;
+	t = malloc(sizeof(t_list));
+	t->content ="hello";
+	t->next = malloc(sizeof(t_list));
+	t->next->content ="hh";
+	t->next->next= malloc(sizeof(t_list));
+	t->next->next->content ="hhf";
+	t->next->next->next =NULL;
+
+	printf("%d",ft_lstsize(t));
+
 }*/
