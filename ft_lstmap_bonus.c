@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 22:47:34 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 22:58:40 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/15 23:32:25 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	
+	return NULL;
 }
