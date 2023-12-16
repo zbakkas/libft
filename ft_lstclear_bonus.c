@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:05:57 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 23:41:26 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/16 16:04:37 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	while (*lst)
 	{
-		//ft_lstdelone(*lst, del);
-		//free(lst);
-		//*lst = (*lst)->next;
-		t_list *temp = (*lst)->next;
-        ft_lstdelone(*lst, del);
-        *lst = temp;
+		ft_lstdelone(*lst, del);
+		*lst = (*lst)->next;
 	}
 	*lst = NULL;
 }
+
 /*
 void free_int(void *data)
 {
     free(data);
 }
-
-
 int main()
 {
 	t_list *t;

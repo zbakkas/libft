@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 15:03:45 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/16 19:43:38 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ char	**ft_split(char const *s, char c)
 int main ()
 {
 	
-    char const *s ="      split       this for   me  !       ";
+    char const *s ="hello!";
 	//char const *s ="  d s vv   ";
 	char c =' ';
 	int x = c_word(s,c); 

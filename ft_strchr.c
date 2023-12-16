@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:38:54 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 14:21:51 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/16 15:25:12 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *str, int c)
 		}
 		x++;
 	}
-	if (str[x] == c)
+	if (str[x] == (unsigned char)c)
 	{
 		return ((char *)(str + x));
 	}

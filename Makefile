@@ -21,7 +21,7 @@ BONUSF = ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
 		ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c\
 
 OBJS:=$(files:.c=.o)
-BONUS_OBJS= $(BONUS:.c=.o)
+BONUS_OBJS= $(BONUSF:.c=.o)
 
 all:$(NAME)
 
@@ -29,8 +29,8 @@ $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 
-bonus:$(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:$(BONUS_OBJS)
+	$(AR) $(NAME) $(BONUS_OBJS)
 
 clean:
 	$(RM) *.o
