@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:44:26 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 20:45:08 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/16 19:58:43 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	{
 		if (*((unsigned char *)re + x) == (unsigned char)c)
 		{
-			return ((char *)re + x);
+			return ((void *)re + x);
 		}
 		x++;
 	}
@@ -32,7 +32,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 /*
 int main ()
 {
-	char *s="hhhh";
-	if(ft_memchr(s,2+256,3) == s+2)
-		printf("ffff");
+	int s[]={1,2,3,4,5};
+	int *ptr = ft_memchr(s,2,5*4);
+	printf("%d",*ptr);
+
 }*/
