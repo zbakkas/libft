@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/20 21:52:01 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/20 23:03:46 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,14 @@ int	c_word(char const *s, char c)
 
 	x = 0;
 	re = 0;
-	if (!s[x] || c == '\0')
+	if (!s[x])
 		return (0);
+	if (s[x] && c == '\0')
+		return (1);
 	while (s[x] == c)
 		x++;
+	if (s[x] == '\0')
+		return (0);
 	while (s[x])
 	{
 		if (c == s[x] && c != s[x + 1] && x < ft_strlen(s) - 1)
@@ -32,7 +36,7 @@ int	c_word(char const *s, char c)
 	return (re + 1);
 }
 
-void	is_free(char **d)
+void	**is_free(char **d)
 {
 	int	x;
 
@@ -43,7 +47,7 @@ void	is_free(char **d)
 		x++;
 	}
 	free(d);
-	d = NULL;
+	return (NULL);
 }
 
 char	*word(char const *s, char c, int *x)
@@ -72,29 +76,31 @@ char	**ft_split(char const *s, char c)
 	char	**re;
 	int		x;
 	int		j;
+	int		t;
 
 	x = 0;
 	j = 0;
-	re = (char **)malloc(1 + c_word(s, c));
+	t = c_word(s, c);
+	re = (char **)malloc((1 + t) * sizeof(char *));
 	if (!re)
 		return (NULL);
-	while (j < c_word(s, c))
+	while (j < t)
 	{
 		re[j] = word(s, c, &x);
 		if (!re[j])
-			is_free(re);
+			return (is_free(re));
 		j++;
 	}
 	re[j] = NULL;
 	return (re);
 }
-
+/*
 int main ()
 {
 	
-    char const *s ="  hegrtg ll  o!";
+    char const *s ="hbkcdbhb";
 	//char const *s ="  d s vv   ";
-	char c =' ';
+	char c =0;
 	int x = 0; 
 	int j=0;
 	while (ft_split(s,c)[j])
@@ -102,7 +108,8 @@ int main ()
 		printf("%s\n",ft_split(s,c)[j]);
 		j++;
 	}
-	//printf("%d\n",c_word(s,c));
+	 printf("%d\n",c_word(s,c));
 	//printf("%s\n",word(s,c,&x));
-	//printf("%s\n",word(s,c,&x));
-}
+	// printf("%s\n",word(s,c,&x));
+	//printf("%s\n",ft_split(s,c)[0]);
+}*/
