@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 21:05:00 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/08 23:53:11 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/18 22:41:31 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 int main ()
 {
-	char a[]="aaab";
-	char b[]="aaac";
-	printf("%d\n",ft_memcmp(a,b,4));
-	printf("%d",memcmp(a,b,4));
+	int a =1234;
+	int b =1490;
+	printf("%d\n",ft_memcmp(&a,&b,2));
+	printf("%d",memcmp(&a,&b,2));
 }*/

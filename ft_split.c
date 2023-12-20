@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/16 19:43:38 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/20 14:29:58 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	*l_word(char const *s, char c, int x)
 	j = 0;
 	xx = x;
 	re = malloc(sizeof(int) * 3);
-	while (s[xx] != c)
+	while (s[xx] != c && s[xx] != '\0')
 	{
 		xx++;
 		j++;
@@ -71,15 +71,13 @@ int	n_word(char const *s, char c, int x)
 	return (x);
 }
 
-void	is_free(char const *s, char c, char **d)
+void	is_free(char const *s, char c, char **d, int x)
 {
-	int	x;
 
-	x = 0;
-	while (d[x])
+	while (x)
 	{
+		x--;
 		free(d[x]);
-		x++;
 	}
 	free(d);
 	d = NULL;
@@ -93,42 +91,47 @@ char	**ft_split(char const *s, char c)
 
 	x = 0;
 	j = 0;
-	re = (char **)ft_calloc(1 + c_word(s, c), sizeof(char *));
+	re = (char **)ft_calloc((1 + c_word(s, c)), sizeof(char *));
 	if (!re)
 		return (NULL);
+	printf("mawssalch\n");
 	if ((c_word(s, c) == 1 && !l_word(s, c, x)[1]) || (!s || c == '\0'))
 	{
+		printf("WSAL\n");
 		re[0] = NULL;
 		return (re);
 	}
 	while (c_word(s, c) > j)
 	{
 		x = n_word(s, c, x);
-		re[j++] = ft_substr(s, x, l_word(s, c, x)[0]);
-		if (!re[j - 1])
-			is_free(s, c, re);
+		re[j] = ft_substr(s, x, l_word(s, c, x)[0]);
+		if (!re[j])
+			is_free(s, c, re, j);
 		if (x == 0)
 			x++;
+		j++;
 	}
 	re[j] = NULL;
 	return (re);
 }
-/*
+
 int main ()
 {
 	
-    char const *s ="hello!";
+    char const *s ="hello!!hellow!";
 	//char const *s ="  d s vv   ";
-	char c =' ';
+	char c ='!';
 	int x = c_word(s,c); 
 	int j=0;
-	while (ft_split(s,c)[j])
-	{
-		printf("%s\n",ft_split(s,c)[j]);
-		j++;
-	}
-	
+	char **po = ft_split(s, c);
+
+	// while (po[j])
+	// {
+	// 	printf("%s\n",po[j]);
+	// 	j++;
+	// }
+
 
 	printf("%d\n",c_word(s,c));
 	//printf("%s\n",ft_split(s,c)[0]);
-}*/
+}

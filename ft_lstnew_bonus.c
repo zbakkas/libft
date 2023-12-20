@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:46:39 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/16 16:01:52 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/19 23:52:22 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
-	{
 		return (NULL);
-	}
 	new_node->content = content;
 	new_node->next = NULL;
 	return (new_node);

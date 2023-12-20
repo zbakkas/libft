@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:49:28 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/15 23:23:55 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/19 23:40:19 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	x;
+	t_list	*re;
 
-	x = ft_lstsize(lst) - 1;
-	while (lst && x)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 	{
 		lst = lst->next;
-		x--;
 	}
-	return (lst);
+	re = lst;
+	return (re);
 }
 /*
-int main() 
+int main()
 {
-	t_list *t;
-	t =malloc(sizeof(t_list));
-	t->content ="1node";
-	t->next =malloc(sizeof(t_list));
-	t->next->content = "2node";
-	t->next->next = NULL;
-   printf("%s",ft_lstlast(t)->content);
+	char *s1 ="11";
+	char *s2 = "22";
+
+	t_list *lst = ft_lstnew("1");
+	lst->next = ft_lstnew("2");
+	t_list *re = ft_lstlast(lst);
+	printf("%s",(char *)(re->content));
 }*/

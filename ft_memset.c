@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:04:01 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/09 15:43:47 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/20 10:28:01 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,13 @@ void	*ft_memset(void *b, int c, size_t len)
 /*
 int main ()
 {
-	char str[] = "gtjgbs";
-	ft_memset(str, '0', 6);
+	int a = 0; 
+	ft_memset(&a,0b11111111,4); 
+	ft_memset(&a,0b11110101,2); 
+	ft_memset(&a,0b11101100,1);
+	printf("%d",a);
 
-	printf("%s", str);
-}*/
+//00001010 00010100  ===>   2580
+//11110101 11101100  ===>   -2580
+}
+*/

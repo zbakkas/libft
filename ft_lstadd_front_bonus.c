@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:29:49 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/16 16:01:44 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/19 19:29:51 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,19 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 /*
 int main()
 {
-	t_list *t;
-	t =malloc(sizeof(t_list));
-	t->content ="1node";
-	t->next =malloc(sizeof(t_list));
-	t->next->content = "2node";
-	t->next->next = NULL;
+	t_list *lst = ft_lstnew("hello1");
+	lst->next = ft_lstnew("hello2");
+	lst->next->next= ft_lstnew("hello3");
 
-	ft_lstadd_front(&t,ft_lstnew("abc"));
-	while (t)
+	t_list *new = ft_lstnew("hello0");
+
+
+	ft_lstadd_front(&lst,new);
+	while (lst)
 	{
-		printf("%s\n",t->content);
-		t = t->next;
+		printf("%s\n",lst->content);
+		lst = lst->next;
 	}
 	
+
 }*/

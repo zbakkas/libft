@@ -6,11 +6,11 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:27:52 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 19:16:49 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/19 23:37:19 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -30,8 +30,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 int main()
 {
-	char s[50] ={"frffr"};
-	char d[50]={"aaaaa"};
-	ft_memcpy(d+2,s,3);
-	printf("%s",d);
+	int s =2580;
+	int d=0;
+	ft_memcpy(&d,&s,4);
+	printf("%d",d);
 }*/
