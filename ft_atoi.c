@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:44:15 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/09 15:34:48 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/21 18:03:59 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	ft_atoi(const char *str)
 	re = 0;
 	sin = 1;
 	while ((str[x] >= 9 && str[x] <= 13) || str[x] == 32)
-	{
 		x++;
-	}
 	if (str[x] == '-')
 	{
 		sin *= -1;
@@ -40,10 +38,11 @@ int	ft_atoi(const char *str)
 	}
 	return (re * sin);
 }
-/*
-int main()
-{
-    char str[]="   -+15456";
-    printf("%d\n",ft_atoi(str));
-   printf("%d",atoi(str));
-}*/
+
+// int main()
+// {//9223372036854775807
+// //-9223372036854775808    ==> 19
+//     char str[]="-9223372036854775807";
+//     printf("%d\n",ft_atoi(str));
+//    printf("%d",atoi(str));
+// }

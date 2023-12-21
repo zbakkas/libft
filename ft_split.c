@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/20 23:03:46 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:43:03 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 int main ()
 {
 	
-    char const *s ="hbkcdbhb";
+    char const *s ="hbk cdbhb";
 	//char const *s ="  d s vv   ";
 	char c =0;
 	int x = 0; 
