@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:27:52 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/21 17:23:24 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/21 18:05:23 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	char *s ="mm";
 // 	char *d=" kmkmkm";
 // 	printf("%s", memcpy("","hiki",4));
-	
 // }
