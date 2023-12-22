@@ -6,16 +6,17 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:44:15 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/21 18:03:59 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/22 20:01:13 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
 int	ft_atoi(const char *str)
 {
 	int	x;
-	int	re;
+	unsigned long long int	re;
 	int	sin;
 
 	x = 0;
@@ -34,6 +35,10 @@ int	ft_atoi(const char *str)
 	{
 		re *= 10;
 		re += str[x] - 48;
+		if (re > 9223372036854775807 && sin == -1)
+			return (0);
+		if (re > 9223372036854775807 && sin == 1)
+			return (-1);
 		x++;
 	}
 	return (re * sin);
@@ -42,7 +47,7 @@ int	ft_atoi(const char *str)
 // int main()
 // {//9223372036854775807
 // //-9223372036854775808    ==> 19
-//     char str[]="-9223372036854775807";
+//     char str[]="12233720368ll547758025257";
 //     printf("%d\n",ft_atoi(str));
 //    printf("%d",atoi(str));
 // }
