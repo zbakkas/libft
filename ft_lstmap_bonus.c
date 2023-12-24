@@ -18,10 +18,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*elm;
 	void	*v;
 
-	if (!lst)
+	if (!lst && !lst)
 		return (NULL);
 	new = NULL;
-	while (lst && f)
+	while (lst)
 	{
 		v = f(lst->content);
 		elm = ft_lstnew(v);
