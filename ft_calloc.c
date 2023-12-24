@@ -14,15 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		x;
-	char	*re;
+	void	*re;
 
-	x = 0;
 	re = malloc (count * size);
 	if (!re)
-	{
 		return (NULL);
-	}
 	ft_bzero(re, size * count);
 	return (re);
 }
