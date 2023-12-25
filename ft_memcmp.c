@@ -29,8 +29,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 // int main ()
 // {
-// 	int a =1234;
-// 	int b =1490;
+// 	int a =1234;//100 11010010
+// 	int b =1490;//101 11010010
 // 	printf("%d\n",ft_memcmp(&a,&b,2));
 // 	printf("%d",memcmp(&a,&b,2));
 // }
