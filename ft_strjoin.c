@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 19:48:58 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 20:51:48 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:46:08 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (re);
 }
-/*
-int main()
-{
-	printf("%s",ft_strjoin("bbbb","aa"));
-}*/

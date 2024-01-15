@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 21:40:56 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 21:05:51 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 22:03:38 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*re;
+	char	*re;
+	size_t	t;
 
+	t = count * size;
+	if (t != 0)
+		if (t / size != count)
+			return (NULL);
 	re = malloc (count * size);
 	if (!re)
 		return (NULL);
 	ft_bzero(re, size * count);
 	return (re);
 }
-/*
-int main()
-{
-    char c[20]="hfygrufugutg";
-    printf("%s",ft_calloc(4,1));
-}*/

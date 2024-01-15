@@ -6,14 +6,13 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:54:10 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/19 18:54:40 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 16:25:17 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 

@@ -1,8 +1,8 @@
 CC =cc
-flags = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-RM = rm -rf
-AR = ar rcs
+RM = rm -f
+AR = ar rc
 files = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c\
 		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c\
@@ -14,11 +14,11 @@ files = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_putnbr_fd.c ft_itoa.c\
 		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
 		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
-		ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c
 
 BONUSF = ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
 		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
-		ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c
 
 OBJS:=$(files:.c=.o)
 BONUS_OBJS= $(BONUSF:.c=.o)
@@ -28,9 +28,13 @@ all:$(NAME)
 $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-
 bonus:$(BONUS_OBJS)
 	$(AR) $(NAME) $(BONUS_OBJS)
+
+%.o:%.c libft.h
+	$(CC) $(FLAGS) -c $< -o $@ 
+
+
 
 clean:
 	$(RM) *.o
@@ -39,4 +43,4 @@ fclean:clean
 	
 re:fclean all
 
-.PHONY: all bonus clean fclean re;
+.PHONY: all bonus clean fclean re

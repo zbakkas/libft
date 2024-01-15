@@ -6,13 +6,13 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:47:33 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/11 14:57:38 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 15:57:49 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	chick(char s, char const *set)
+static	int	chick(char s, char const *set)
 {
 	int	x;
 
@@ -32,6 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		star;
 	int		end;
 
+	if (!s1)
+		return (NULL);
 	star = 0;
 	end = ft_strlen(s1);
 	while (s1[star] && chick(s1[star], set))
@@ -44,12 +46,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		re = ft_substr(s1, star, star - end);
 	return (re);
 }
-/*
-int main()
-{
-	char s1[]="k       gyt0lg";
-	char set[]="g oklk";
-	
-	printf("==%s",ft_strtrim(s1,set));
-
-}*/

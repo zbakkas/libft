@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:27:52 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/21 18:05:23 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 16:32:11 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int	x;
+	int	s;
 
 	x = 0;
+	s = n;
 	if (!dest && !src)
 		return (NULL);
-	while (*((char *)dest + x) == *((char *)src + x))
-	{
-		if (*((char *)dest + x) == '\0' && *((char *)src + x) == '\0')
-			return (dest);
-		x++;
-	}
+	if (dest == src)
+		return (dest);
 	x = 0;
 	while (n > 0)
 	{
@@ -34,11 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <string.h>
-// int main()
-// {
-// 	char *s ="mm";
-// 	char *d=" kmkmkm";
-// 	printf("%s", memcpy("","hiki",4));
-// }

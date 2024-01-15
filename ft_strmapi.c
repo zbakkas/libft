@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:11:52 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 20:50:03 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:46:45 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (re);
 }
-/*
-char ch(unsigned int i, char c)
-{
-	if(c == 'o')
-		return '*';
-	return c;
-
-}
-
-int main ()
-{
-	printf("%s",ft_strmapi("gtgoofj",ch));
-}*/

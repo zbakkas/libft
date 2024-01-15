@@ -6,16 +6,16 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:07:07 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/21 16:43:03 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 16:39:11 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	c_word(char const *s, char c)
+static	int	c_word(char const *s, char c)
 {
-	int	x;
-	int	re;
+	size_t	x;
+	int		re;
 
 	x = 0;
 	re = 0;
@@ -36,7 +36,7 @@ int	c_word(char const *s, char c)
 	return (re + 1);
 }
 
-void	**is_free(char **d)
+static	char	**is_free(char **d)
 {
 	int	x;
 
@@ -50,7 +50,7 @@ void	**is_free(char **d)
 	return (NULL);
 }
 
-char	*word(char const *s, char c, int *x)
+static	char	*word(char const *s, char c, int *x)
 {
 	int		i;
 	char	*re;
@@ -80,6 +80,8 @@ char	**ft_split(char const *s, char c)
 
 	x = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	t = c_word(s, c);
 	re = (char **)malloc((1 + t) * sizeof(char *));
 	if (!re)
@@ -94,22 +96,3 @@ char	**ft_split(char const *s, char c)
 	re[j] = NULL;
 	return (re);
 }
-/*
-int main ()
-{
-	
-    char const *s ="hbk cdbhb";
-	//char const *s ="  d s vv   ";
-	char c =0;
-	int x = 0; 
-	int j=0;
-	while (ft_split(s,c)[j])
-	{
-		printf("%s\n",ft_split(s,c)[j]);
-		j++;
-	}
-	 printf("%d\n",c_word(s,c));
-	//printf("%s\n",word(s,c,&x));
-	// printf("%s\n",word(s,c,&x));
-	//printf("%s\n",ft_split(s,c)[0]);
-}*/

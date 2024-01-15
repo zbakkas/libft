@@ -6,13 +6,13 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:27:33 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/14 19:05:16 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 22:58:33 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	chick_l(int n)
+static	int	chick_l(int n)
 {
 	int	x;
 
@@ -58,8 +58,3 @@ char	*ft_itoa(int n)
 		re[x] = '-';
 	return (re);
 }
-/*
-int main()
-{
-	printf("%s",ft_itoa(-623));
-}*/

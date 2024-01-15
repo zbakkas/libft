@@ -6,12 +6,12 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:38:54 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/16 15:25:12 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 16:05:04 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
+
 char	*ft_strchr(const char *str, int c)
 {
 	int	x;
@@ -31,9 +31,3 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-/*
-int main ()
-{
-	printf("%s\n",ft_strchr("",'h'));
-	printf("%s",strchr("",'h'));
-}*/

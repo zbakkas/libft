@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:31:44 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/08 18:16:49 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 16:37:46 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	x;
-	int	i;
+	size_t	x;
+	size_t	i;
 
 	x = 0;
 	if (needle[0] == '\0')
@@ -37,9 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*
-int main ()
-{
-	printf("%s \n",ft_strnstr("aaaaaaabnhht","ab",7));
-	printf("%s",strnstr("aaaaaaabnhht","ab",7));
-}*/

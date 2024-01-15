@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 22:46:50 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/08 17:16:34 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 20:04:25 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,3 @@ void	ft_bzero(void *s, size_t n)
 		*((char *)(s + n)) = 0;
 	}
 }
-/*
-int main()
-{
-    char c [50]="adsfdgfufif";
-    printf("%s\n",c);
-    ft_bzero(c,5);
-    printf("%s\n",c);
-
-}*/

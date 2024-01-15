@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:04:01 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/20 10:28:01 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 21:20:24 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	x = 0;
 	while (len)
 	{
-		*((unsigned char *)(b + x)) = c;
+		*((unsigned char *)(b + x)) = (unsigned char)c;
 		len--;
 		x++;
 	}
 	return (b);
 }
-/*
-int main ()
-{
-	int a = 0; 
-	ft_memset(&a,0b11111111,4); 
-	ft_memset(&a,0b11110101,2); 
-	ft_memset(&a,0b11101100,1);
-	printf("%d",a);
-
-//00001010 00010100  ===>   2580
-//11110101 11101100  ===>   -2580
-}
-*/

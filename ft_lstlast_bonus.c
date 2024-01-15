@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:49:28 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/19 23:40:19 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 15:43:09 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ t_list	*ft_lstlast(t_list *lst)
 	re = lst;
 	return (re);
 }
-/*
-int main()
-{
-	char *s1 ="11";
-	char *s2 = "22";
-
-	t_list *lst = ft_lstnew("1");
-	lst->next = ft_lstnew("2");
-	t_list *re = ft_lstlast(lst);
-	printf("%s",(char *)(re->content));
-}*/

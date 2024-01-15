@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:57:11 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/16 19:42:19 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:27:44 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[d] = '\0';
 	return (t);
 }
-/*
-int main()
-{
-	char d[100]="lla";//2
-	//char d2[14]="abcd";//2
-	char s[]="lorem";//
-	printf("%lu\n",ft_strlcat(d,s,52));
-	printf("%s\n",d);
-//pqrs    abcdefghi 15
-//pqrs   abcdefghi 16
-  //               17
-	///printf("%lu\n",ft_strlcat(d2,s,8));
-	//printf("%s",d2);
-}*/

@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:32:25 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/08 19:41:44 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/23 16:00:11 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-/*
-int main()
-{
-	printf("%c",ft_lolower('A'));
-}*/

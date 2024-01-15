@@ -6,7 +6,7 @@
 /*   By: zbakkas <zbakkas@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:36:48 by zbakkas           #+#    #+#             */
-/*   Updated: 2023/12/20 13:04:55 by zbakkas          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:47:45 by zbakkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	re[x] = '\0';
 	return (re);
 }
-
-// int main()
-// {
-// 	char *s = "holaa!";
-//     char *ret = ft_substr(s,2,5);
-// 	printf("%s",ret);
-// }
