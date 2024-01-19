@@ -13,7 +13,7 @@
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
-{
+{/*
 	char	*re;
 	size_t	t;
 
@@ -25,5 +25,12 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!re)
 		return (NULL);
 	ft_bzero(re, size * count);
-	return (re);
+	return (re);*/
+	char	*res;
+
+	res = malloc(size * count);
+	if (!res)
+		return (NULL);
+	ft_bzero(res, size * count);
+	return (res);
 }
